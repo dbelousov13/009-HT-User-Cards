@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   --CardWidth: 300px;
   --CardHeight: calc(var(--CardWidth) * 1.5);
@@ -42,7 +46,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1 solid rgb(255, 255, 255);
   border-radius: 15px;
   background-color: var(--backgroundCard);
 }
@@ -55,14 +58,14 @@ body {
   text-align: center;
   height: calc(var(--CardHeight) * 0.4);
   width: var(--CardWidth);
-  /* border: 1px solid black; */
 }
 
 .bottomCard {
   height: calc(var(--CardHeight) * 0.6);
   width: var(--CardWidth);
-  /* border: 1px solid black; */
   background-color: var(--backgroundBottomCard);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .UserPhoto {
@@ -94,19 +97,55 @@ p:nth-child(2) {
 
 p:nth-child(3) {
   font-size: 0.9rem;
-  /* font-weight: bold; */
   color: var(--second-Child-Text-color);
   margin: 20px 20%;
 }
 
 .bottomCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  flex-direction: column;
 }
 
-a {
-  /* width: calc(var(--CardWidth) * 0.5); */
-  width: 50px;
-  height: calc(var(--CardHeight) * 0.2);
-  border: 1px solid black;
+.linkButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+}
+
+.links {
+  width: 100%;
+}
+
+/* .links > a { */
+div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 200px;
+  max-width: 200px;
+  padding: 15px 0;
+  border: 1px solid rgb(3, 155, 230);
+  border-radius: 20px;
+  margin: 2% 15%;
+
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(3, 155, 230);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.linkButtons > div:nth-of-type(2) > a {
+  /* border: 1px solid red; */
+  background-color: rgb(3, 155, 230);
+  color: rgb(243, 244, 246);
 }
