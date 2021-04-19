@@ -69,6 +69,8 @@ body {
 }
 
 .UserPhoto {
+  display: flex;
+  position: relative;
   /* width: calc(calc(var(--CardHeight) * 0.5) * 0.4);
   /* width: calc(var(--CardWidth) * 0.5); */
   /* height: calc(calc(var(--CardHeight) * 0.5) * 0.4); */
@@ -80,6 +82,24 @@ body {
   height: calc(calc(var(--CardHeight) * 0.5) * 0.4);
   border-radius: 50%;
 }
+
+.status {
+  background-color: var(--backgroundCard);
+  position: absolute;
+  bottom: -13px;
+  left: 33px;
+  /* border: 1px solid green; */
+  border-radius: 50%;
+  /* z-index: 2; */
+}
+
+/* #onlineStar {
+  width: 15px;
+  position: absolute;
+  border: 1px solid green;
+  border-radius: 50%;
+  left: 3px;
+} */
 
 p:first-child {
   font-size: var(--first-Child-Text-size);
@@ -107,6 +127,7 @@ p:nth-child(3) {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  /* height: 350px; */
 }
 
 .linkButtons {
@@ -121,6 +142,7 @@ p:nth-child(3) {
 
 .links {
   width: 100%;
+  margin: auto;
 }
 
 /* .links > a { */
@@ -148,4 +170,19 @@ div > a {
   /* border: 1px solid red; */
   background-color: rgb(3, 155, 230);
   color: rgb(243, 244, 246);
+}
+
+.onlineStatus {
+  margin: auto;
+  color: var(--first-Child-Text-color);
+}
+
+.onlineStatusOnline {
+  margin: auto;
+  text-align: center;
+}
+
+.onlineStatusOnline > img {
+  width: 13px;
+  height: 13px;
 }
